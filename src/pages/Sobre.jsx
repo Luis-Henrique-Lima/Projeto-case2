@@ -17,7 +17,7 @@ function Sobre() {
     }, [])
 
     return (
-        <Container className='conteudo-margin pt-5 pb-5'>
+        <Container className='conteudo-margin pt-5'>
             <h1>Sobre</h1>
             <p>{sobre.text}</p>
         </Container>

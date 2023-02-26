@@ -10,7 +10,7 @@ function Contato() {
     }
 
     return (
-        <Container className='conteudo-margin pt-5 pb-5'>
+        <Container className='conteudo-margin pt-5'>
             <h1>Contato</h1>
             <p>Entre em contato conosco</p>
 
