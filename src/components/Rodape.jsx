@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 
 function Rodape() {
     return (
-        <section className="">
+        <section className="pt-5">
   {/* Footer */}
   <footer className="bg-dark text-center text-white">
 
