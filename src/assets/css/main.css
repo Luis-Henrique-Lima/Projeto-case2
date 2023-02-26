@@ -10,3 +10,8 @@
 .nav-link{
     border-bottom: 1px solid transparent;
 }
+
+.rounded {
+    height: auto;
+    max-width: 100%;
+}
