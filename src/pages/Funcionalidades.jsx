@@ -24,7 +24,7 @@ function Funcionalidades() {
     return (
         <>
         <Container className="conteudo-margin pt-5">
-            <h1>Funcionalidades</h1>
+            <h1>Filmes</h1>
             <ListaFuncionalidades funcionalidades={funcionalidades} />
         </Container>
         </>
