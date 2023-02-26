@@ -29,7 +29,7 @@ function Menu() {
                     <LinkContainer to="/sobre">
                         <Nav.Link>Sobre</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/funcionalidades">
+                    <LinkContainer to="/filmes">
                         <Nav.Link>Filmes</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/contato">
