@@ -94,39 +94,50 @@ function AdminFuncionalidades() {
 
     return (
         <Container className="conteudo-margin">
-            <h1>Admin Funcionalidades</h1>
+            <h1>Filmes (Admin)</h1>
             <hr />
-            <h2>Adicionar Funcionalidade</h2>
+            <h2>Adicionar Filme</h2>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="title">
-                    <Form.Label>Título</Form.Label>
-                    <Form.Control type="text" placeholder="Digite o título da funcionalidade" />
+                <Form.Group className="mb-3" controlId="nome">
+                    <Form.Label>Nome</Form.Label>
+                    <Form.Control type="text" placeholder="Digite o nome do filme" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="description">
-                    <Form.Label>Descrição</Form.Label>
-                    <Form.Control type="text" placeholder="Digite a descrição" />
+                <Form.Group className="mb-3" controlId="genero">
+                    <Form.Label>Gênero</Form.Label>
+                    <Form.Control type="text" placeholder="Digite o gênero do filme" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="ano">
+                    <Form.Label>Ano</Form.Label>
+                    <Form.Control type="number" placeholder="Digite o ano do filme" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="duracao">
+                    <Form.Label>Duração</Form.Label>
+                    <Form.Control type="time" placeholder="Digite a duração" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Cadastrar
                 </Button>
             </Form>
             <hr />
-            <p>Lista de Funcionalidades</p>
+            <p>Lista de Filmes</p>
             <Table striped hover>
                 <thead>
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
-                        <th>Descrição</th>
-                        <th>Opções</th>
+                        <th>Gênero</th>
+                        <th>Ano</th>
+                        <th>Duração</th>
                     </tr>
                 </thead>
                 <tbody>
                     {funcionalidades.map((funcionalidade) => (
                         <tr key={funcionalidade.id}>
                             <td>{funcionalidade.id}</td>
-                            <td>{funcionalidade.title}</td>
-                            <td>{funcionalidade.description}</td>
+                            <td>{funcionalidade.nome}</td>
+                            <td>{funcionalidade.genero}</td>
+                            <td>{funcionalidade.ano}</td>
+                            <td>{funcionalidade.duracao}</td>
                             <td>
                                 <Button variant="primary" onClick={(event) => {habilitarEdicao(event.target, funcionalidade.id)}}>Editar</Button>
                                  | 
