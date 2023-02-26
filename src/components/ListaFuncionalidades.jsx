@@ -8,10 +8,16 @@ function ItemFuncionalidade(item) {
             <Card className='m-3'>
                 <Card.Body>
                     <Card.Title>
-                        <strong>{item.title}</strong>
+                        <strong>{item.nome}</strong>
                     </Card.Title>
                     <Card.Text>
-                        {item.description}
+                        {item.genero}
+                    </Card.Text>
+                    <Card.Text>
+                        {item.ano}
+                    </Card.Text>
+                    <Card.Text>
+                        {item.duracao}
                     </Card.Text>
                 </Card.Body>
             </Card>
