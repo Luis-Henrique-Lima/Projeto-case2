@@ -12,8 +12,10 @@ const migrate = async () => {
     ])
     await Product._migrate([
         '"ID" INTEGER PRIMARY KEY NOT NULL',
-        '"TITLE" TEXT NOT NULL',
-        '"DESCRIPTION" TEXT NOT NULL'
+        '"NOME" TEXT NOT NULL',
+        '"GENERO" TEXT NOT NULL',
+        '"ANO" INTERGER NOT NULL',
+        '"DURACAO" TIME NOT NULL'
     ])
     await User._migrate([
         '"ID" INTEGER PRIMARY KEY NOT NULL',

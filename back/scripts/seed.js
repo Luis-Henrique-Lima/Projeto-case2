@@ -21,8 +21,10 @@ const seed = async () => {
     const products = []
     for (let i=1; i<=10; i++) {
         const prod = new Product()
-        prod.title = `Produto ${i}`
-        prod.description = `Descrição do produto ${i}`
+        prod.nome = `Produto ${i}`
+        prod.genero = `Produto ${i}`
+        prod.ano = `${i}`
+        prod.duracao = `02:15`
         products.push(prod)
     }
 

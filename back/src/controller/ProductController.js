@@ -3,23 +3,25 @@ import Product from "../DAO/Product.js"
 
 export default class ProductController {
     static rotas(app) {
-        app.post('/funcionalidades', verificarToken, ProductController.inserir)
-        app.get('/funcionalidades', ProductController.listarTodos)
-        app.patch('/funcionalidades/:id', verificarToken, ProductController.atualizar)
-        app.delete('/funcionalidades/:id', verificarToken, ProductController.deletar)
+        app.post('/filmes', verificarToken, ProductController.inserir)
+        app.get('/filmes', ProductController.listarTodos)
+        app.patch('/filmes/:id', verificarToken, ProductController.atualizar)
+        app.delete('/filmes/:id', verificarToken, ProductController.deletar)
     }
 
     static async inserir(req, res) {        
-        const { title, description } = req.body
-        if (!title || !description) {
+        const { nome, genero, ano, duracao } = req.body
+        if (!nome || !genero || !ano || !duracao) {
             return res.status(400).send({
                 message: 'Os campos "title" e "description" são obrigatórios'
             })
         }
 
         const product = new Product()
-        product.title = title
-        product.description = description
+        product.nome = nome
+        product.genero = genero
+        product.ano = ano
+        product.duracao = duracao
 
         await product.save()
 
@@ -47,12 +49,18 @@ export default class ProductController {
             })
         }
 
-        const {title, description} = req.body
-        if (title) {
-            product.title = title
+        const {nome, genero, ano, duracao} = req.body
+        if (nome) {
+            product.nome = nome
         }
-        if (description) {
-            product.description = description
+        if (genero) {
+            product.genero = genero
+        }
+        if (ano) {
+            product.ano = ano
+        }
+        if (duracao) {
+            product.duracao = duracao
         }
 
         await product.save()

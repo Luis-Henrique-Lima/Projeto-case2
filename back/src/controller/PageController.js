@@ -3,14 +3,20 @@ import Page from "../DAO/Page.js"
 
 export default class PageController {
     static rotas(app) {
-        app.get('/', PageController.listar)
-        app.patch('/', verificarToken, PageController.atualizar)
+        app.get('/sobre/:id', PageController.listar)
+        app.patch('/sobre/:id', verificarToken, PageController.atualizar)
     }
 
     static async listar(req, res) {
-        const page = await Page.findAll()
+        const {id} = req.params
+        const page = await Page.findByProperty('id', id)
+        if (!page) {
+            return res.status(404).send({
+                message: 'Página não encontrada'
+            })
+        }
         res.status(200).send({
-            message: 'Paginas listadas com sucesso!',
+            message: 'Sucesso ao buscar página',
             data: page
         })
     }
