@@ -30,7 +30,7 @@ function Menu() {
                         <Nav.Link>Sobre</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/funcionalidades">
-                        <Nav.Link>Funcionalidades</Nav.Link>
+                        <Nav.Link>Filmes</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/contato">
                         <Nav.Link>Contato</Nav.Link>
