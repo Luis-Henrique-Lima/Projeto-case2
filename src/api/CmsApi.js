@@ -14,11 +14,11 @@ const CmsApi = () => {
                 })
             })
         },
-        getSobre () {
-            return fetch(`${url}/paginas/1`)
+        getSobre (id) {
+            return fetch(`${url}/sobre/1`)
         },
         patchSobre (sobre) {
-            return fetch(`${url}/paginas/1`, {
+            return fetch(`${url}/sobre/1`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,10 +28,10 @@ const CmsApi = () => {
             })
         },        
         getFuncionalidades () {
-            return fetch(`${url}/produtos`)
+            return fetch(`${url}/filmes`)
         },
         postFuncionalidade (funcionalidade) {
-            return fetch(`${url}/produtos`, {
+            return fetch(`${url}/filmes`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const CmsApi = () => {
             })
         },
         patchFuncionalidade (funcionalidade) {
-            return fetch(`${url}/produtos/${funcionalidade.id}`, {
+            return fetch(`${url}/filmes/${funcionalidade.id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,39 @@ const CmsApi = () => {
             })
         },
         deleteFuncionalidade (id) {
-            return fetch(`${url}/produtos/${id}`, {
+            return fetch(`${url}/filmes/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': localStorage.getItem('token')
+                }
+            })
+        },
+        getContatos () {
+            return fetch(`${url}/contatos`)
+        },
+        postContatos (contatos) {
+            return fetch(`${url}/contatos`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': localStorage.getItem('token')
+                },
+                body: JSON.stringify(contatos)
+            })
+        },
+        patchContatos (contatos) {
+            return fetch(`${url}/contatos/${contatos.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-auth-token': localStorage.getItem('token')
+                },
+                body: JSON.stringify(contatos)
+            })
+        },
+        deleteContatos (id) {
+            return fetch(`${url}/contatos/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
