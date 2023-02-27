@@ -20,10 +20,12 @@ function AdminFuncionalidades() {
     async function handleSubmit(event) {
         event.preventDefault()
         const form = event.currentTarget
-        const title = form.title.value
-        const description = form.description.value
+        const nome = form.nome.value
+        const genero = form.genero.value
+        const ano = form.ano.value
+        const duracao = form.duracao.value
 
-        const response = await CmsApi().postFuncionalidade({title, description})
+        const response = await CmsApi().postFuncionalidade({nome, genero, ano, duracao})
         if(!response.ok) {
             alert('Erro ao cadastrar funcionalidade')
             return
