@@ -13,7 +13,7 @@ function Depoimentos() {
                 <strong>Maria Eduarda</strong>
                 <p>
                     "Simplesmente amo a DevPlayTV!<br />
-                    Eu sempre me perdia em qual episódio havia parado nas séries, mas com o DevPlayTV posso anotar quais séries já assisti, quais estou assistindo e qual último episódio assistido. Me salva muito!!"
+                    Sou apaixonada por filmes e a DevPlayTV possui um catálogo maravilhoso com todos os meus favoritos!"
                 </p>
             </Col>
         </Row>
@@ -24,7 +24,7 @@ function Depoimentos() {
             <Col sm="12" md="10">
                 <strong>Mateus Borges</strong>
                 <p>
-                "Muito intuitivo!<br /> Além de fácil de usar, as listas ficam muito bem organizadas."
+                "Muito intuitivo!<br /> Além de fácil de usar, a qualidade de áudio e imagem dos vídeos é superior a de outros serviços de streaming."
                 </p>
             </Col>
         </Row>        
