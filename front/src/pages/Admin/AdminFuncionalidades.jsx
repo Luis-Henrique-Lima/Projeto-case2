@@ -54,38 +54,58 @@ function AdminFuncionalidades() {
         botao.onclick = (event) => {salvarEdicao(event.target, id)}
 
         const linha = botao.parentNode.parentNode
-        const colunaTitulo = linha.children[1]
+        const colunaNome = linha.children[1]
         // Cria um input para o título
-        const inputTitulo = document.createElement('input')
-        inputTitulo.type = 'text'
-        inputTitulo.value = colunaTitulo.innerText
-        colunaTitulo.innerText = ''
-        colunaTitulo.appendChild(inputTitulo)
-        // Cria um input para a descrição
-        const colunaDescricao = linha.children[2]
-        const inputDescricao = document.createElement('input')
-        inputDescricao.type = 'text'
-        inputDescricao.value = colunaDescricao.innerText
-        colunaDescricao.innerText = ''
-        colunaDescricao.appendChild(inputDescricao)
+        const inputNome = document.createElement('input')
+        inputNome.type = 'text'
+        inputNome.value = colunaNome.innerText
+        colunaNome.innerText = ''
+        colunaNome.appendChild(inputNome)
+        // Cria um input para o gênero
+        const colunaGenero = linha.children[2]
+        const inputGenero = document.createElement('input')
+        inputGenero.type = 'text'
+        inputGenero.value = colunaGenero.innerText
+        colunaGenero.innerText = ''
+        colunaGenero.appendChild(inputGenero)
+        // Cria um input para o ano.
+        const colunaAno = linha.children[3]
+        const inputAno = document.createElement('input')
+        inputAno.type = 'number'
+        inputAno.value = colunaAno.innerText
+        colunaAno.innerText = ''
+        colunaAno.appendChild(inputAno)
+        // Cria um input para a duração
+        const colunaDuracao = linha.children[4]
+        const inputDuracao = document.createElement('input')
+        inputDuracao.type = 'time'
+        inputDuracao.value = colunaDuracao.innerText
+        colunaDuracao.innerText = ''
+        colunaDuracao.appendChild(inputDuracao)
     }
 
     async function salvarEdicao(botao, id) {
         const linha = botao.parentNode.parentNode
-        const colunaTitulo = linha.children[1]
-        const inputTitulo = colunaTitulo.children[0]
-        const colunaDescricao = linha.children[2]
-        const inputDescricao = colunaDescricao.children[0]
+        const colunaNome = linha.children[1]
+        const inputNome = colunaNome.children[0]
+        const colunaGenero = linha.children[2]
+        const inputGenero = colunaGenero.children[0]
+        const colunaAno = linha.children[3]
+        const inputAno = colunaAno.children[0]
+        const colunaDuracao = linha.children[4]
+        const inputDuracao = colunaDuracao.children[0]
 
-        const response = await CmsApi().patchFuncionalidade({id: id, title: inputTitulo.value, description: inputDescricao.value})
+        const response = await CmsApi().patchFuncionalidade({id: id, nome: inputNome.value, genero: inputGenero.value, ano: inputAno.value, duracao: inputDuracao.value})
         if(!response.ok) {
             alert('Erro ao editar funcionalidade')
             return
         }
         alert('Funcionalidade editada com sucesso')
         
-        colunaTitulo.innerText = inputTitulo.value
-        colunaDescricao.innerText = inputDescricao.value
+        colunaNome.innerText = inputNome.value
+        colunaGenero.innerText = inputGenero.value
+        colunaAno.innerText = inputAno.value
+        colunaDuracao.innerText = inputDuracao.value
 
         botao.innerText = 'Editar'
         botao.classList.remove('btn-success')
@@ -101,6 +121,9 @@ function AdminFuncionalidades() {
             </LinkContainer>
             <LinkContainer to="/admin/filmes">
                         <Button variant='secondary'>FILMES (ADMIN)</Button>
+            </LinkContainer>
+            <LinkContainer to="/admin/contatos">
+                        <Button variant='secondary'>CONTATOS (ADMIN)</Button>
             </LinkContainer>
             </Container>    
 
@@ -123,6 +146,10 @@ function AdminFuncionalidades() {
                 <Form.Group className="mb-3" controlId="duracao">
                     <Form.Label>Duração</Form.Label>
                     <Form.Control type="time" placeholder="Digite a duração" />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="imagem">
+                    <Form.Label>Imagem</Form.Label>
+                    <Form.Control type="url" placeholder="Insira a url da imagem" />
                 </Form.Group>
                 <Button variant="success" type="submit">
                     Cadastrar
