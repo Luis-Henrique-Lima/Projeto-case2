@@ -27,7 +27,7 @@ function Destaques() {
                         <Card.Text>
                             Navegue com rápidez enquanto assiste seus vídeos e fique tranquilo! Seus dados são armazenados em servidores seguros.
                         </Card.Text>
-                        <LinkContainer to="/funcionalidades">
+                        <LinkContainer to="/filmes">
                             <Button variant="outline-dark">Conheça nosso catálogo</Button>
                         </LinkContainer>
                     </Card.Body>
