@@ -43,13 +43,13 @@ function Sobre() {
             <div className="grupo">
 
             <div className="cd">
-                    <img  className="img" src="https://pps.whatsapp.net/v/t61.24694-24/308127072_499829412202307_5095190849182454928_n.jpg?ccb=11-4&oh=01_AdTHBQxYGZmnncbO98vWtVCxtln866rOeB0nJN1BC9nhPw&oe=640A0531" alt="" />
+                    <img  className="img" src="https://media.licdn.com/dms/image/C4E03AQH6n375gDWWYg/profile-displayphoto-shrink_800_800/0/1647735420676?e=1683158400&v=beta&t=Kjm7Lber2DdcDtif83gwsk7kEzWHG7_yWAearKr8Ow0" alt="" />
                     <h5 >GEOVANI HENRIQUE</h5>
                     <br></br>
                     <div className="socialLinks">
-                    <a href="https://github.com/Geovani-Henrique"><img alt="SocialMedia" src={GithubIcon} style={{ height: 25, width: 25,  }} /></a>
+                    <a href="https://github.com/Geovani-Henrique" target="_blank"><img alt="SocialMedia" src={GithubIcon} style={{ height: 25, width: 25,  }} /></a>
                     <a href="#"><img alt="SocialMedia" src={InstagramIcon} style={{ height: 25,width: 25, }} /></a>
-                    <a href="#"><img alt="SocialMedia" src={LinkedinIcon} style={{ height: 25,width: 25, }} /></a>
+                    <a href="https://www.linkedin.com/in/geovanihenrique/" target="_blank"><img alt="SocialMedia" src={LinkedinIcon} style={{ height: 25,width: 25, }} /></a>
                     </div>
                 </div>
 
@@ -58,20 +58,20 @@ function Sobre() {
                 <h5 >JUAN SALES</h5>
                 <br></br>
                 <div className="socialLinks">
-                <a href="https://github.com/Juangsales"><img alt="SocialMedia"  src={GithubIcon}  style={{height: 25,width: 25,}}/></a> 
-                <a href="#"><img alt="SocialMedia" src={InstagramIcon} style={{height: 25,width: 25,}} /></a>
-                <a href="https://www.linkedin.com/in/juan-sales-723524158/"><img alt="SocialMedia" src={LinkedinIcon}  style={{height: 25,width: 25,}}/></a>
+                <a href="https://github.com/Juangsales" target="_blank"><img alt="SocialMedia"  src={GithubIcon}  style={{height: 25,width: 25,}}/></a> 
+                <a href="#" target="_blank"><img alt="SocialMedia"  src={InstagramIcon} style={{height: 25,width: 25,}} /></a>
+                <a href="https://www.linkedin.com/in/juan-sales-723524158/"  target="_blank"><img alt="SocialMedia" src={LinkedinIcon}  style={{height: 25,width: 25,}}/></a>
             </div>
                 </dir>
 
                 <div className="cd">
-                <img  className="img" src="https://pps.whatsapp.net/v/t61.24694-24/299364158_158312316853639_2694731832107616508_n.jpg?ccb=11-4&oh=01_AdQWHortv-eIakIB-teFzobtv91W_XK9FR7YRNBNN8YTTQ&oe=6409F9AC" alt="" />
+                <img  className="img" src="https://media.licdn.com/dms/image/C4D03AQGmHxCWckKtzA/profile-displayphoto-shrink_800_800/0/1663353703503?e=1683158400&v=beta&t=WKpVjP8hvCT0j23MlP6H5hJ4WX4hrkpbWYsfk1xtWYg" alt="" />
                     <h5>LEONARDO GABRIEL</h5>
                     <br></br>
                     <div className="socialLinks">
-                    <a href="https://github.com/leomacena"><img alt="SocialMedia" src={GithubIcon} style={{ height: 25, width: 25,  }} /></a>
+                    <a href="https://github.com/leomacena" target="_blank"><img alt="SocialMedia" src={GithubIcon} style={{ height: 25, width: 25,  }} /></a>
                     <a href="#"><img alt="SocialMedia" src={InstagramIcon} style={{ height: 25,width: 25, }} /></a>
-                    <a href="#"><img alt="SocialMedia" src={LinkedinIcon} style={{ height: 25,width: 25, }} /></a>
+                    <a href="https://www.linkedin.com/in/leonardomacena/" target="_blank"><img alt="SocialMedia" src={LinkedinIcon} style={{ height: 25,width: 25, }} /></a>
                     </div>
                 </div>
 
@@ -80,9 +80,9 @@ function Sobre() {
                 <h5 >LUAN ALVES</h5>
                 <br></br>
                 <div className="socialLinks">
-                <a href="https://github.com/luanmartins8"><img alt="SocialMedia" src={GithubIcon} style={{height: 25,width: 25,}} /></a>
+                <a href="https://github.com/luanmartins8" target="_blank"><img alt="SocialMedia" src={GithubIcon} style={{height: 25,width: 25,}} /></a>
                 <a href="#"><img alt="SocialMedia" src={InstagramIcon} style={{ height: 25, width: 25,}} /></a>
-                <a href="https://www.linkedin.com/in/luan-martins-55b33916b/"><img alt="SocialMedia" src={LinkedinIcon}style={{height: 25,width: 25, }} /></a>
+                <a href="https://www.linkedin.com/in/luan-martins-55b33916b/" target="_blank"><img alt="SocialMedia" src={LinkedinIcon}style={{height: 25,width: 25, }} /></a>
             </div>
           </div>
                 <div className="cd">
@@ -90,9 +90,9 @@ function Sobre() {
                     <h5 >LUÍS HENRIQUE</h5>
                     <br></br>
                     <div className="socialLinks">
-                    <a href="https://github.com/Luis-Henrique-Lima"><img alt="SocialMedia" src={GithubIcon} style={{ height: 25, width: 25,  }} /></a>
+                    <a href="https://github.com/Luis-Henrique-Lima" target="_blank"><img alt="SocialMedia" src={GithubIcon} style={{ height: 25, width: 25,  }} /></a>
                     <a href="#"><img alt="SocialMedia" src={InstagramIcon} style={{ height: 25,width: 25, }} /></a>
-                    <a href="https://www.linkedin.com/in/lu%C3%ADs-henrique-santos/"><img alt="SocialMedia" src={LinkedinIcon} style={{ height: 25,width: 25, }} /></a>
+                    <a href="https://www.linkedin.com/in/lu%C3%ADs-henrique-santos/" target="_blank"><img alt="SocialMedia" src={LinkedinIcon} style={{ height: 25,width: 25, }} /></a>
                     </div>
                 </div>
 
