@@ -1,0 +1,17 @@
+.conteudo-margin {
+    margin-top: 55px;
+}
+
+.active.nav-link {
+    color: #e91e63 !important;
+    border-bottom: 1px solid #e91e63 !important;
+}
+
+.nav-link{
+    border-bottom: 1px solid transparent;
+}
+
+.rounded {
+    height: auto;
+    max-width: 100%;
+}
