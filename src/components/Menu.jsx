@@ -9,16 +9,7 @@ function Menu() {
     return (<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
         <Container>
             <LinkContainer to="/">
-                <Navbar.Brand>            
-                <img
-        alt="logo"
-        src="../logo.png"
-        style={{
-          height: 41.25,
-          width: 190.75
-        }}
-      />
-      </Navbar.Brand>
+                <Navbar.Brand><h1>DEVPLAY TV</h1></Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
