@@ -12,7 +12,7 @@ function Menu() {
                 <Navbar.Brand>            
                 <img
         alt="logo"
-        src="../public/logo.png"
+        src="../logo.png"
         style={{
           height: 41.25,
           width: 190.75
