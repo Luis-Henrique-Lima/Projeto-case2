@@ -1,6 +1,6 @@
 import {Container, Button, Form} from 'react-bootstrap'
 import Depoimentos from '../components/Depoimentos'
-
+import "../css/Contato.css"
 function Contato() {
 
     const handleSubmit = (event) => {
@@ -17,15 +17,15 @@ function Contato() {
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="Nome">
                     <Form.Label>Nome</Form.Label>
-                    <Form.Control type="text" placeholder="Digite seu nome completo" />
+                    <Form.Control className="Form-Control" type="text" placeholder="Digite seu nome completo" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="Email">
                     <Form.Label>E-mail</Form.Label>
-                    <Form.Control type="email" placeholder="Digite seu e-mail" />
+                    <Form.Control className="Form-Control" type="email" placeholder="Digite seu e-mail" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="Mensagem">
                     <Form.Label>Mensagem</Form.Label>
-                    <Form.Control as="textarea" rows={3} />
+                    <Form.Control className="Form-Control" as="textarea" rows={3} />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Enviar contato
