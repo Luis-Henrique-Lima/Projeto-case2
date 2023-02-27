@@ -9,9 +9,9 @@ function Destaques() {
                 <Card>
                     <Card.Img variant="top" src="../img1.png" className ="rounded" />
                     <Card.Body>
-                        <Card.Title>Fácil de usar</Card.Title>
+                        <Card.Title>Assista de onde estiver</Card.Title>
                         <Card.Text>
-                            O DevPlayTV é muito fácil de usar. Você pode criar suas próprias listas de fimes e séries. 
+                            O DevPlayTV é prático e você pode acessar de todos os seus dispositivos. Assista seus fimes e séries preferidos aonde estiver. 
                         </Card.Text>
                         <LinkContainer to="/">
                             <Button variant="outline-dark">Acessar o DevPlayTV</Button>
@@ -25,10 +25,10 @@ function Destaques() {
                     <Card.Body>
                         <Card.Title>Rápido e confiável</Card.Title>
                         <Card.Text>
-                            O DevPlayTV é muito rápido e confiável. Seus dados são armazenados em servidores seguros.
+                            Navegue com rápidez enquanto assiste seus vídeos e fique tranquilo! Seus dados são armazenados em servidores seguros.
                         </Card.Text>
                         <LinkContainer to="/funcionalidades">
-                            <Button variant="outline-dark">Conheça mais</Button>
+                            <Button variant="outline-dark">Conheça nosso catálogo</Button>
                         </LinkContainer>
                     </Card.Body>
                 </Card>
@@ -39,7 +39,7 @@ function Destaques() {
                     <Card.Body>
                         <Card.Title>Suporte personalizado</Card.Title>
                         <Card.Text>
-                            O DevPlayTV oferece suporte personalizado para você. Entre em contato conosco e tire suas dúvidas.
+                            O DevPlayTV oferece suporte personalizado para você. Entre em contato conosco e tire todas as suas dúvidas.
                         </Card.Text>
                         <LinkContainer to="/contato">
                         <Button variant="outline-dark">Entre em contato</Button>
