@@ -7,7 +7,7 @@ function Destaques() {
         <Row className='mt-2'>
             <Col className='mt-2' sm="12" md="4">
                 <Card>
-                    <Card.Img variant="top" src="../public/img1.png" className ="rounded" />
+                    <Card.Img variant="top" src="../img1.png" className ="rounded" />
                     <Card.Body>
                         <Card.Title>Fácil de usar</Card.Title>
                         <Card.Text>
@@ -21,7 +21,7 @@ function Destaques() {
             </Col>
             <Col className='mt-2' sm="12" md="4">
                 <Card>
-                    <Card.Img variant="top" src="../public/img2.png"  className="rounded"/>
+                    <Card.Img variant="top" src="../img2.png"  className="rounded"/>
                     <Card.Body>
                         <Card.Title>Rápido e confiável</Card.Title>
                         <Card.Text>
@@ -35,7 +35,7 @@ function Destaques() {
             </Col>
             <Col className='mt-2' sm="12" md="4">
                 <Card>
-                    <Card.Img variant="top" src="../public/img3.png" className="rounded" />
+                    <Card.Img variant="top" src="../img3.png" className="rounded" />
                     <Card.Body>
                         <Card.Title>Suporte personalizado</Card.Title>
                         <Card.Text>
