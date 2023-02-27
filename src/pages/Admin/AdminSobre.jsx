@@ -1,5 +1,6 @@
 import {Container, Form, Button} from 'react-bootstrap'
 import {useEffect, useState} from 'react'
+import { LinkContainer } from 'react-router-bootstrap'
 import CmsApi from '../../api/CmsApi'
 
 function AdminSobre() {
@@ -36,7 +37,17 @@ function AdminSobre() {
 
     return (
         <Container className="conteudo-margin">
-            <h1>Admin Funcionalidades</h1>
+
+<Container style={{display:"flex", justifyContent:'space-around', margin:'10% 0% 3% 0%'}}>
+            <LinkContainer to="/admin/sobre">
+                        <Button variant='secondary'>SOBRE (ADMIN)</Button>
+            </LinkContainer>
+            <LinkContainer to="/admin/filmes">
+                        <Button variant='secondary'>FILMES (ADMIN)</Button>
+            </LinkContainer>
+            </Container> 
+
+            <h1>Sobre (Admin)</h1>
             <hr />
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="text">

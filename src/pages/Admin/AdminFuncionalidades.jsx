@@ -1,6 +1,7 @@
 import {Container, Table, Form, Button} from 'react-bootstrap'
 import {useEffect, useState} from 'react'
 import CmsApi from '../../api/CmsApi'
+import { LinkContainer } from 'react-router-bootstrap';
 import Funcionalidades from './../Funcionalidades';
 
 function AdminFuncionalidades() {
@@ -93,7 +94,16 @@ function AdminFuncionalidades() {
 
 
     return (
-        <Container className="conteudo-margin">
+        <Container style={{marginTop:"5%"}} className="conteudo-margin">
+            <Container style={{display:"flex", justifyContent:'space-around', margin:'10% 0% 3% 0%'}}>
+            <LinkContainer to="/admin/sobre">
+                        <Button variant='secondary'>SOBRE (ADMIN)</Button>
+            </LinkContainer>
+            <LinkContainer to="/admin/filmes">
+                        <Button variant='secondary'>FILMES (ADMIN)</Button>
+            </LinkContainer>
+            </Container>    
+
             <h1>Filmes (Admin)</h1>
             <hr />
             <h2>Adicionar Filme</h2>
@@ -114,7 +124,7 @@ function AdminFuncionalidades() {
                     <Form.Label>Duração</Form.Label>
                     <Form.Control type="time" placeholder="Digite a duração" />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="success" type="submit">
                     Cadastrar
                 </Button>
             </Form>
@@ -139,7 +149,7 @@ function AdminFuncionalidades() {
                             <td>{funcionalidade.ano}</td>
                             <td>{funcionalidade.duracao}</td>
                             <td>
-                                <Button variant="primary" onClick={(event) => {habilitarEdicao(event.target, funcionalidade.id)}}>Editar</Button>
+                                <Button variant="warning" onClick={(event) => {habilitarEdicao(event.target, funcionalidade.id)}}>Editar</Button>
                                  | 
                                  <Button variant="danger" onClick={() => {excluirFuncionalidade(funcionalidade.id)}}>Excluir</Button>
                             </td>
