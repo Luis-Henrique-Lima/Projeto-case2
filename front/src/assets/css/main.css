@@ -10,15 +10,3 @@
 .nav-link{
     border-bottom: 1px solid transparent;
 }
-
-.rounded {
-    height: auto;
-    max-width: 100%;
-}
-
-.body {
-    background: linear-gradient(0deg,#000,#24262b 47%,#000);
-    background-repeat: repeat;
-    color: #bbb;
-    overflow-x: hidden;
-}
