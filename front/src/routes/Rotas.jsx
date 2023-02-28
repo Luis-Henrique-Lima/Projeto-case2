@@ -7,6 +7,8 @@ import Funcionalidades from '../pages/Funcionalidades'
 import Login from '../pages/Login'
 import AdminFuncionalidades from '../pages/Admin/AdminFuncionalidades'
 import AdminSobre from '../pages/Admin/AdminSobre'
+import AdminContato from '../pages/Admin/AdminContato'
+import PrivateRoute from '../PrivateRoute'
 
 function Rotas() {
     return (
@@ -16,8 +18,9 @@ function Rotas() {
             <Route path="/contato" element={<Contato />} />
             <Route path="/filmes" element={<Funcionalidades />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/admin/filmes" element={<AdminFuncionalidades />} />
-            <Route path="/admin/sobre" element={<AdminSobre />} />
+            <Route path="/admin/filmes" element={<PrivateRoute><AdminFuncionalidades /></PrivateRoute>} />
+            <Route path="/admin/sobre" element={<PrivateRoute><AdminSobre /></PrivateRoute>} />
+            <Route path="/admin/contato" element={<PrivateRoute><AdminContato /></PrivateRoute>} />
         </Routes>
     )
 }
