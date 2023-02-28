@@ -1,29 +1,33 @@
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import '../assets/css/ListaFuncionalidades.css'
 
 function ItemFuncionalidade(item) {
     return (
-        <Col sm="12" md="4" key={item.id}>
-            <Card className='m-3'>
-            <Card.Img variant="top" src="./img1.png"/>
+        <Col clasName="sm-12 md-4" key={item.id}>
+            <div className="flip-card m-3">
+                <div className ="flip-card-inner m-5">
+                    <Card.Img className ="flip-card-front" variant="top" src={item.url}/>
+            <Card className='flip-card-back'>
                 <Card.Body>
                     <Card.Title>
                         <strong>{item.nome}</strong>
                     </Card.Title>
-                        <Card.Text style={{marginBottom:"0"}}>
+                    <Card.Text>
                         {item.genero}
                     </Card.Text>
-                    <Card.Text style={{marginBottom:"0"}}>
-                        {item.duracao}
-                    </Card.Text>
-                    <Card.Text style={{marginBottom:"0"}}>
+                    <Card.Text>
                         {item.ano}
                     </Card.Text>
-                    <Button style={{width:"100%"}} variant="success">ASSISTIR FILME</Button>
+                    <Card.Text>
+                        {item.duracao}
+                    </Card.Text>
                 </Card.Body>
             </Card>
+            </div>
+            </div>
+            
         </Col>
     );
 }
