@@ -13,7 +13,7 @@ function Destaques() {
                         <Card.Text>
                             O DevPlayTV é prático e você pode acessar de todos os seus dispositivos. Assista seus fimes e séries preferidos aonde estiver. 
                         </Card.Text>
-                        <LinkContainer to="/">
+                        <LinkContainer to="/login">
                             <Button variant="outline-dark">Acessar o DevPlayTV</Button>
                         </LinkContainer>
                     </Card.Body>
