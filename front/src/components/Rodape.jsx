@@ -4,7 +4,7 @@ function Rodape() {
     return (
         <section className="pt-5">
   {/* Footer */}
-  <footer className="bg-dark text-center text-white">
+  <footer className="bg-dark text-center text-white mt-4">
 
     {/* Grid container */}
     <div className="container p-4 pb-0">
