@@ -1,6 +1,5 @@
 import ListaFuncionalidades from "../components/ListaFuncionalidades"
 import Container from 'react-bootstrap/Container'
-import Banners from "../components/Banners"
 import { useEffect, useState } from "react"
 import CmsApi from '../api/CmsApi'
 
@@ -23,7 +22,7 @@ function Funcionalidades() {
 
     return (
         <>
-        <Container className="conteudo-margin pt-5">
+        <Container style={{marginBottom:'20%'}} className="conteudo-margin pt-5"> 
             <h1>Filmes</h1>
             <ListaFuncionalidades funcionalidades={funcionalidades} />
         </Container>

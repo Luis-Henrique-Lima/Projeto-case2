@@ -25,8 +25,9 @@ function AdminFuncionalidades() {
         const ano = form.ano.value
         const duracao = form.duracao.value
         const url = form.url.value
+        const sinopse = form.sinopse.value
 
-        const response = await CmsApi().postFuncionalidade({nome, genero, ano, duracao, url})
+        const response = await CmsApi().postFuncionalidade({nome, genero, ano, duracao, url, sinopse})
         console.log('ok')
         if(!response.ok) {
             alert('Erro ao cadastrar funcionalidade')
@@ -93,6 +94,13 @@ function AdminFuncionalidades() {
         inputUrl.value = colunaUrl.innerText
         colunaUrl.innerText = ''
         colunaUrl.appendChild(inputUrl)
+        // Cria um input para a sinopse
+        const colunaSinopse = linha.children[6]
+        const inputSinopse = document.createElement('input')
+        inputSinopse.type = 'text'
+        inputSinopse.value = colunaSinopse.innerText
+        colunaSinopse.innerText = ''
+        colunaSinopse.appendChild(inputSinopse)
     }
 
     async function salvarEdicao(botao, id) {
@@ -107,9 +115,11 @@ function AdminFuncionalidades() {
         const inputDuracao = colunaDuracao.children[0]
         const colunaUrl = linha.children[5]
         const inputUrl = colunaUrl.children[0]
+        const colunaSinopse = linha.children[6]
+        const inputSinopse = colunaSinopse.children[0]
     
 
-        const response = await CmsApi().patchFuncionalidade({id: id, nome: inputNome.value, genero: inputGenero.value, ano: inputAno.value, duracao: inputDuracao.value, url: inputUrl.value})
+        const response = await CmsApi().patchFuncionalidade({id: id, nome: inputNome.value, genero: inputGenero.value, ano: inputAno.value, duracao: inputDuracao.value, url: inputUrl.value, sinopse: inputSinopse.value})
         if(!response.ok) {
             alert('Erro ao editar funcionalidade')
             return
@@ -121,6 +131,7 @@ function AdminFuncionalidades() {
         colunaAno.innerText = inputAno.value
         colunaDuracao.innerText = inputDuracao.value
         colunaUrl.innerText = inputUrl.value
+        colunaSinopse.innerText = inputSinopse.value
 
         botao.innerText = 'Editar'
         botao.classList.remove('btn-success')
@@ -151,6 +162,10 @@ function AdminFuncionalidades() {
                     <Form.Label>Duração</Form.Label>
                     <Form.Control type="text" placeholder="Digite a duração" />
                 </Form.Group>
+                <Form.Group className="mb-3" controlId="sinopse">
+                    <Form.Label>Sinopse</Form.Label>
+                    <Form.Control type="text" placeholder="Insira a sinopse do filme" />
+                </Form.Group>
                 <Form.Group className="mb-3" controlId="url">
                     <Form.Label>Imagem</Form.Label>
                     <Form.Control type="text" placeholder="Insira a url da imagem" />
@@ -170,6 +185,7 @@ function AdminFuncionalidades() {
                         <th>Ano</th>
                         <th>Duração</th>
                         <th>Url</th>
+                        <th>Sinopse</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -181,6 +197,7 @@ function AdminFuncionalidades() {
                             <td style={{color:'#bbbbbb'}}>{funcionalidade.ano}</td>
                             <td style={{color:'#bbbbbb'}}>{funcionalidade.duracao}</td>
                             <td style={{color:'#bbbbbb'}}>{funcionalidade.url}</td>
+                            <td style={{color:'#bbbbbb'}}>{funcionalidade.sinopse}</td>
                             <td>
                                 <Button variant="warning" onClick={(event) => {habilitarEdicao(event.target, funcionalidade.id)}}>Editar</Button>
                                  | 
