@@ -1,74 +1,78 @@
+<h1>CASE 2: SITE DO MEU APP</h1>
+
 ![logo 7223f813d1de956d2822](https://user-images.githubusercontent.com/85020469/222034303-c769a11c-bc6b-48b1-8617-d7d4457e0e28.png)
 
+## Proposta do projeto
+
+O grupo deve decidir qual será o MVP utilizado nessa fase, o site precisa ter:
+<ul>
+<li />Página inicial
+<li />Sobre (com conteúdo editável)
+<li />Funcionalidades (com conteúdo cadastrável e editável)
+<li />Tela de contato.
+</ul>
+O conteúdo das páginas sobre e funcionalidades deve ser consultado de uma API, para realizar a edição e cadastro serão criadas rotas /admin.
+<br />
+Hora de colocar tudo que discutimos sobre metodologias ágeis em prática!
+<br />
 
 ## Sobre o projeto
 
-O projeto foi desenvolvido com o intuito de criar um site para o EstudoApp, uma aplicação que ajuda os estudantes a se organizarem e estudarem melhor. O site foi desenvolvido com ReactJS e React Bootstrap. Para gestão do conteúdo é possível acessar a rota /login e informar usuário e senha cadastrados no back-end, essa rota recebe um token que fica armazenado no localStorage do navegador e é utilizado para acessar as rotas do admin.
+O projeto foi desenvolvido com o intuito de criar um site para o `DEVPLAY TV`, um site de filmes feito pela necessidade de unir em um só lugar descrições sobre filmes, paraa cinéfiilos que ajuda os usuários a se organizarem e busacrem as informações disponíveis.
+O site foi desenvolvido com ReactJS e React Bootstrap. Para gestão do conteúdo é possível acessar a rota /login e informar usuário e senha cadastrados no back-end, essa rota recebe um token que fica armazenado no localStorage do navegador e é utilizado para acessar as rotas do admin.
 
 ## Pré-requisitos
 
 - [Node.js](https://nodejs.org/en/) (na versão 16 ou superior)
 - [NPM](https://www.npmjs.com/)
 
-## Como executar?
+## Como executar o Back-End?
 
 ```bash
+cd back
+npm install
+npm start
+```
+## Como executar o Front-End?
+
+```bash
+cd front
 npm install
 npm run dev
 ```
 
-## Passo a passo do desenvolvimento
-
-### 1. Criar o projeto
+## Dependências e bibliotecas
 
 ```bash
-npm create vite@latest estudoapp-site --template react
-```
-
-### 2. Instalar as dependências
-
-```bash
-cd estudoapp-site
+npm install nodemon --save-dev
+npm install bcrypt cors express sqlite sqlite3
 npm install react-bootstrap bootstrap
 npm install react-router-dom
 npm install react-router-bootstrap
 ```
 
-#### 2.1 Importar css do bootstrap
+## Estrutura do site
 
-Adicione a seguinte linha em seu `main.jsx`:
+O front e o back form desenvolvidos com auxílio do documento encontado em:
+<p>https://github.com/resilia-br/case2-backend</p>
+<p>https://github.com/resilia-br/case2-frontend</p>
 
-```js
-import 'bootstrap/dist/css/bootstrap.min.css'
-```
+### Configurando a comunicação com o back-end
 
-Adicione a seguinte linha em seu `index.html`:
+Crie a pasta api, e dentro inclua um arquivo com as rotas que foram criadas em sua api. Criando funções para cada ação do back-end. (Exemplo: [CmsApi.js](/Projeto-case2-main/front/src/api/CmsApi.js))
 
-```js
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" /> 
-```
+## Criando as páginas do site
 
-### 3. Excluir arquivos que não serão utilizados
+Crie a pasta pages, e dentro inclua um arquivo para cada página do site. (Exemplo: [Home.jsx](/Projeto-case2-main/front/src/pages/Home.jsx))
 
-Exclua os arquivos de configuração inicial do vite, deixando apenas uma div no arquivo App.jsx
+## Criando os componentes do site
 
-### 4. Configurando a comunicação com o back-end
+Durante a criação das páginas aproveite para componentizar seu código. Crie a pasta components, e dentro inclua um arquivo para cada componente do site. (Exemplo: [Menu.jsx](/Projeto-case2-main/front/src/components/Menu.jsx))
 
-Crie a pasta api, e dentro inclua um arquivo com as rotas que foram criadas em sua api. Criando funções para cada ação do back-end. (Exemplo: [CmsApi.js](/estudoapp-site/src/api/CmsApi.js))
+### Criando as rotas do site
 
-### 5. Criando as páginas do site
+Crie a pasta routes, e dentro inclua um arquivo com a configuração das rotas do site, aqui estamos utilizando o `react-router-dom` para isso. (Exemplo: [Rotas.jsx](/Projeto-case2-main/front/src/routes/Rotas.jsx))
 
-Crie a pasta pages, e dentro inclua um arquivo para cada página do site. (Exemplo: [Home.jsx](/estudoapp-site/src/pages/Home.jsx))
+### Configurando as páginas do lado do admin
 
-#### 5.1 Criando os componentes do site
-
-Durante a criação das páginas aproveite para componentizar seu código. Crie a pasta components, e dentro inclua um arquivo para cada componente do site. (Exemplo: [Menu.jsx](/estudoapp-site/src/components/Menu.jsx))
-
-### 6. Criando as rotas do site
-
-Crie a pasta routes, e dentro inclua um arquivo com a configuração das rotas do site, aqui estamos utilizando o `react-router-dom` para isso. (Exemplo: [Rotas.jsx](/estudoapp-site/src/routes/Rotas.jsx))
-
-### 7. Configurando as páginas do lado do admin
-
-Crie a pasta admin, dentro da pasta pages, e dentro inclua um arquivo para cada página da administração. Aqui nesse projeto estamos utilizando um exemplo de login simples com um token que é enviado pelo back-end após acessar a tela de login (Exemplo: [AdminFuncionalidades.jsx](/estudoapp-site/src/pages/admin/AdminFuncionalidades.jsx) e [AdminLogin.jsx](/estudoapp-site/src/pages/Login.jsx))
+Crie a pasta admin, dentro da pasta pages, e dentro inclua um arquivo para cada página da administração. Aqui nesse projeto estamos utilizando um exemplo de login simples com um token que é enviado pelo back-end após acessar a tela de login (Exemplo: [AdminFuncionalidades.jsx](/Projeto-case2-main/front/src/pages/admin/AdminFuncionalidades.jsx) e [Login.jsx](/Projeto-case2-main/front/src/pages/Login.jsx))
