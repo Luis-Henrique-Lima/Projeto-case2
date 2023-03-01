@@ -19,7 +19,7 @@ function Login() {
 
         const dados = await retorno.json()
         localStorage.setItem('token', dados.token)
-        window.location.href = '/admin/funcionalidades'
+        window.location.href = '/admin/filmes'
     }
 
     return (

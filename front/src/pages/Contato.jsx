@@ -37,10 +37,12 @@ function Contato() {
         form.reset()
     }
 
+    
+    
     return (
-        <Container className='conteudo-margin mb-5 pt-5'>
-            <h1 className="p-3"> <span>Con</span>tato</h1>
-            
+        <Container className='conteudo-margin pt-5'>
+            <h1>Contato</h1>
+            <p>Entre em contato conosco</p>
 
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="nome">
@@ -54,9 +56,9 @@ function Contato() {
                 <Form.Group className="mb-3" controlId="mensagem">
                     <Form.Label>Mensagem</Form.Label>
                     <Form.Control className="Form-Control" as="textarea" rows={3} />
-                </Form.Group> <br></br>
-                <Button variant="primary" type="submit" style={{backgroundColor:'black'}}>
-                    <span>ENVIAR</span>
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Enviar contato
                 </Button>
             </Form>
 

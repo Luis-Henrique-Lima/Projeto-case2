@@ -80,11 +80,15 @@ function AdminFuncionalidades() {
         // Cria um input para a duração
         const colunaDuracao = linha.children[4]
         const inputDuracao = document.createElement('input')
-        inputDuracao.type = 'time'
+        inputDuracao.type = 'text'
         inputDuracao.value = colunaDuracao.innerText
         colunaDuracao.innerText = ''
         colunaDuracao.appendChild(inputDuracao)
     }
+
+
+//DAQUI PRA CIMA
+
 
     async function salvarEdicao(botao, id) {
         const linha = botao.parentNode.parentNode
@@ -96,8 +100,11 @@ function AdminFuncionalidades() {
         const inputAno = colunaAno.children[0]
         const colunaDuracao = linha.children[4]
         const inputDuracao = colunaDuracao.children[0]
+        const colunaUrl = linha.children[5]
+        const inputUrl = colunaUrl.children[0]
+    
 
-        const response = await CmsApi().patchFuncionalidade({id: id, nome: inputNome.value, genero: inputGenero.value, ano: inputAno.value, duracao: inputDuracao.value})
+        const response = await CmsApi().patchFuncionalidade({id: id, nome: inputNome.value, genero: inputGenero.value, ano: inputAno.value, duracao: inputDuracao.value, url: inputUrl.value})
         if(!response.ok) {
             alert('Erro ao editar funcionalidade')
             return
@@ -108,6 +115,7 @@ function AdminFuncionalidades() {
         colunaGenero.innerText = inputGenero.value
         colunaAno.innerText = inputAno.value
         colunaDuracao.innerText = inputDuracao.value
+        colunaUrl.innerText = inputUrl.value
 
         botao.innerText = 'Editar'
         botao.classList.remove('btn-success')
@@ -147,7 +155,7 @@ function AdminFuncionalidades() {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="duracao">
                     <Form.Label>Duração</Form.Label>
-                    <Form.Control type="time" placeholder="Digite a duração" />
+                    <Form.Control type="text" placeholder="Digite a duração" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="imagem">
                     <Form.Label>Imagem</Form.Label>
@@ -167,6 +175,7 @@ function AdminFuncionalidades() {
                         <th>Gênero</th>
                         <th>Ano</th>
                         <th>Duração</th>
+                        <th>Url</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -177,6 +186,7 @@ function AdminFuncionalidades() {
                             <td>{funcionalidade.genero}</td>
                             <td>{funcionalidade.ano}</td>
                             <td>{funcionalidade.duracao}</td>
+                            <td>{funcionalidade.url}</td>
                             <td>
                                 <Button variant="warning" onClick={(event) => {habilitarEdicao(event.target, funcionalidade.id)}}>Editar</Button>
                                  | 
