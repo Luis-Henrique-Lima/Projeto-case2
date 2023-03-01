@@ -3,7 +3,7 @@ import Depoimentos from '../components/Depoimentos'
 import { useEffect, useState } from 'react'
 import CmsApi from '../api/CmsApi'
 import Row from 'react-bootstrap/esm/Row'
-import "../css/Sobre.css"
+import "../assets/css/Sobre.css"
 import GithubIcon from "../media/github.png"
 import LinkedinIcon from "../media/linkedin.png"
 import InstagramIcon from "../media/instagram.png";
