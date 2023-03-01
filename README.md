@@ -21,6 +21,13 @@ Hora de colocar tudo que discutimos sobre metodologias ágeis em prática!
 O projeto foi desenvolvido com o intuito de criar um site para o `DEVPLAY TV`, um site de filmes feito pela necessidade de unir em um só lugar descrições sobre filmes, paraa cinéfiilos que ajuda os usuários a se organizarem e busacrem as informações disponíveis.
 O site foi desenvolvido com ReactJS e React Bootstrap. Para gestão do conteúdo é possível acessar a rota /login e informar usuário e senha cadastrados no back-end, essa rota recebe um token que fica armazenado no localStorage do navegador e é utilizado para acessar as rotas do admin.
 
+## Tecnologias utilizadas
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rect/rect-original.svg)" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="40" height="40"/>
+
+          
+
+
 ## Pré-requisitos
 
 - [Node.js](https://nodejs.org/en/) (na versão 16 ou superior)
