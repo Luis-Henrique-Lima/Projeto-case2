@@ -18,7 +18,7 @@ Hora de colocar tudo que discutimos sobre metodologias ágeis em prática!
 
 ## Sobre o projeto
 
-O projeto foi desenvolvido com o intuito de criar um site para o `DEVPLAY TV`, um site de filmes feito pela necessidade de unir em um só lugar descrições sobre filmes, paraa cinéfiilos que ajuda os usuários a se organizarem e busacrem as informações disponíveis.
+O projeto foi desenvolvido com o intuito de criar um site para o DEVPLAY TV, um site de filmes feito pela necessidade de unir em um só lugar descrições sobre filmes, para cinéfilos que ajuda os usuários a se organizarem e buscarem as informações disponíveis.
 O site foi desenvolvido com ReactJS e React Bootstrap. Para gestão do conteúdo é possível acessar a rota /login e informar usuário e senha cadastrados no back-end, essa rota recebe um token que fica armazenado no localStorage do navegador e é utilizado para acessar as rotas do admin.
 
 ## Tecnologias utilizadas
