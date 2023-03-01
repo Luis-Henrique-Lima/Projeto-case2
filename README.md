@@ -1,6 +1,5 @@
-# case2-frontend
+![logo 7223f813d1de956d2822](https://user-images.githubusercontent.com/85020469/222034303-c769a11c-bc6b-48b1-8617-d7d4457e0e28.png)
 
-Case 2 - Site do EstudoApp (Frontend)
 
 ## Sobre o projeto
 
