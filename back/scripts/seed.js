@@ -25,7 +25,6 @@ const seed = async () => {
         prod.genero = `DRAMA`
         prod.ano = `2023`
         prod.duracao = `01:55`
-        prod.sinopse = `SINOPSE DO FILME`
         prod.url = `https://cdnim.prd.cineticket.com.br/asset/movie/7976/a-baleia-poster-desktop-4960c.jpeg`
         products.push(prod)
     }
