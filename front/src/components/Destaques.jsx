@@ -13,7 +13,7 @@ function Destaques() {
                         <Card.Text>
                             O DevPlayTV é prático e você pode acessar de todos os seus dispositivos. Assista seus fimes e séries preferidos aonde estiver. 
                         </Card.Text>
-                        <LinkContainer to="/login">
+                        <LinkContainer style={{color:"#bbbbbb"}} to="/login">
                             <Button variant="outline-dark">Acessar o DevPlayTV</Button>
                         </LinkContainer>
                     </Card.Body>
@@ -27,7 +27,7 @@ function Destaques() {
                         <Card.Text>
                             Navegue com rápidez enquanto assiste seus vídeos e fique tranquilo! Seus dados são armazenados em servidores seguros.
                         </Card.Text>
-                        <LinkContainer to="/filmes">
+                        <LinkContainer style={{color:"#bbbbbb"}}  to="/filmes">
                             <Button variant="outline-dark">Conheça nosso catálogo</Button>
                         </LinkContainer>
                     </Card.Body>
@@ -41,7 +41,7 @@ function Destaques() {
                         <Card.Text>
                             O DevPlayTV oferece suporte personalizado para você. Entre em contato conosco e tire todas as suas dúvidas.
                         </Card.Text>
-                        <LinkContainer to="/contato">
+                        <LinkContainer style={{color:"#bbbbbb"}}  to="/contato">
                         <Button variant="outline-dark">Entre em contato</Button>
                         </LinkContainer>
                     </Card.Body>

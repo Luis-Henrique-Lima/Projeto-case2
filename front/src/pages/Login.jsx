@@ -23,7 +23,7 @@ function Login() {
     }
 
     return (
-        <Container className='conteudo-margin pt-5 pb-5'>
+        <Container style={{marginBottom:'15%'}} className='conteudo-margin pt-5 pb-5'>
         <h1>Login</h1>
 
         <Form onSubmit={handleSubmit}>

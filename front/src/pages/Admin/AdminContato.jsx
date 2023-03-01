@@ -35,18 +35,7 @@ function AdminContatos() {
     
     return (
         <>
-        <Container style={{marginTop:"5%"}} className="conteudo-margin">
-            <Container style={{display:"flex", justifyContent:'space-around', margin:'10% 0% 3% 0%'}}>
-            <LinkContainer to="/admin/sobre">
-                        <Button variant='secondary'>SOBRE (ADMIN)</Button>
-            </LinkContainer>
-            <LinkContainer to="/admin/filmes">
-                        <Button variant='secondary'>FILMES (ADMIN)</Button>
-            </LinkContainer>
-            <LinkContainer to="/admin/contato">
-                        <Button variant='secondary'>CONTATOS (ADMIN)</Button>
-            </LinkContainer>
-            </Container>    
+        <Container style={{marginBottom:'50%', textAlign:'center'}} className="conteudo-margin pt-5"> 
 
             <h1>Contatos (Admin)</h1>
             

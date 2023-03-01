@@ -36,16 +36,8 @@ function AdminSobre() {
     }
 
     return (
-        <Container className="conteudo-margin">
+        <Container style={{marginBottom:'50%', textAlign:'center'}} className="conteudo-margin pt-5">
 
-<Container style={{display:"flex", justifyContent:'space-around', margin:'10% 0% 3% 0%'}}>
-            <LinkContainer to="/admin/sobre">
-                        <Button variant='secondary'>SOBRE (ADMIN)</Button>
-            </LinkContainer>
-            <LinkContainer to="/admin/filmes">
-                        <Button variant='secondary'>FILMES (ADMIN)</Button>
-            </LinkContainer>
-            </Container> 
 
             <h1>Sobre (Admin)</h1>
             <hr />

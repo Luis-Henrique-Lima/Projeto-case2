@@ -60,10 +60,10 @@ const CmsApi = () => {
             })
         },
         getContatos () {
-            return fetch(`${url}/contatos`)
+            return fetch(`${url}/contato`)
         },
         postContatos (contatos) {
-            return fetch(`${url}/contatos`, {
+            return fetch(`${url}/contato`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const CmsApi = () => {
             })
         },
         patchContatos (contatos) {
-            return fetch(`${url}/contatos/${contatos.id}`, {
+            return fetch(`${url}/contato/${contatos.id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const CmsApi = () => {
             })
         },
         deleteContatos (id) {
-            return fetch(`${url}/contatos/${id}`, {
+            return fetch(`${url}/contato/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

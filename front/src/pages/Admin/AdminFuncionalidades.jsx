@@ -24,8 +24,10 @@ function AdminFuncionalidades() {
         const genero = form.genero.value
         const ano = form.ano.value
         const duracao = form.duracao.value
+        const url = form.url.value
 
-        const response = await CmsApi().postFuncionalidade({nome, genero, ano, duracao})
+        const response = await CmsApi().postFuncionalidade({nome, genero, ano, duracao, url})
+        console.log('ok')
         if(!response.ok) {
             alert('Erro ao cadastrar funcionalidade')
             return
@@ -84,11 +86,14 @@ function AdminFuncionalidades() {
         inputDuracao.value = colunaDuracao.innerText
         colunaDuracao.innerText = ''
         colunaDuracao.appendChild(inputDuracao)
+        // Cria um input para a url
+        const colunaUrl = linha.children[5]
+        const inputUrl = document.createElement('input')
+        inputUrl.type = 'text'
+        inputUrl.value = colunaUrl.innerText
+        colunaUrl.innerText = ''
+        colunaUrl.appendChild(inputUrl)
     }
-
-
-//DAQUI PRA CIMA
-
 
     async function salvarEdicao(botao, id) {
         const linha = botao.parentNode.parentNode
@@ -124,19 +129,8 @@ function AdminFuncionalidades() {
 
 
     return (
-        <Container style={{marginTop:"5%"}} className="conteudo-margin">
-            <Container style={{display:"flex", justifyContent:'space-around', margin:'10% 0% 3% 0%'}}>
-            <LinkContainer to="/admin/sobre">
-                        <Button variant='secondary'>SOBRE (ADMIN)</Button>
-            </LinkContainer>
-            <LinkContainer to="/admin/filmes">
-                        <Button variant='secondary'>FILMES (ADMIN)</Button>
-            </LinkContainer>
-            <LinkContainer to="/admin/contatos">
-                        <Button variant='secondary'>CONTATOS (ADMIN)</Button>
-            </LinkContainer>
-            </Container>    
-
+        <Container style={{marginBottom:'50%', textAlign:'center'}} className="conteudo-margin pt-5"> 
+            
             <h1>Filmes (Admin)</h1>
             <hr />
             <h2>Adicionar Filme</h2>
@@ -157,17 +151,17 @@ function AdminFuncionalidades() {
                     <Form.Label>Duração</Form.Label>
                     <Form.Control type="text" placeholder="Digite a duração" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="imagem">
+                <Form.Group className="mb-3" controlId="url">
                     <Form.Label>Imagem</Form.Label>
-                    <Form.Control type="url" placeholder="Insira a url da imagem" />
+                    <Form.Control type="text" placeholder="Insira a url da imagem" />
                 </Form.Group>
                 <Button variant="success" type="submit">
                     Cadastrar
                 </Button>
             </Form>
             <hr />
-            <p>Lista de Filmes</p>
-            <Table striped hover>
+            <p>LISTA DE FILMES</p>
+            <Table style={{color:'whitesmoke'}} striped hover>
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -181,12 +175,12 @@ function AdminFuncionalidades() {
                 <tbody>
                     {funcionalidades.map((funcionalidade) => (
                         <tr key={funcionalidade.id}>
-                            <td>{funcionalidade.id}</td>
-                            <td>{funcionalidade.nome}</td>
-                            <td>{funcionalidade.genero}</td>
-                            <td>{funcionalidade.ano}</td>
-                            <td>{funcionalidade.duracao}</td>
-                            <td>{funcionalidade.url}</td>
+                            <td style={{color:'#bbbbbb'}}>{funcionalidade.id}</td>
+                            <td style={{color:'#bbbbbb'}}>{funcionalidade.nome}</td>
+                            <td style={{color:'#bbbbbb'}}>{funcionalidade.genero}</td>
+                            <td style={{color:'#bbbbbb'}}>{funcionalidade.ano}</td>
+                            <td style={{color:'#bbbbbb'}}>{funcionalidade.duracao}</td>
+                            <td style={{color:'#bbbbbb'}}>{funcionalidade.url}</td>
                             <td>
                                 <Button variant="warning" onClick={(event) => {habilitarEdicao(event.target, funcionalidade.id)}}>Editar</Button>
                                  | 

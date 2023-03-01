@@ -7,19 +7,6 @@ function Rodape() {
   <footer className="bg-dark text-center text-white mt-4">
 
     {/* Grid container */}
-    <div className="container p-4 pb-0">
-      {/* Section: CTA */}
-      <section className="">
-        <p className="d-flex justify-content-center align-items-center">
-          <span className="me-3">Register for free</span>
-          <button type="button" className="btn btn-outline-light btn-rounded">
-            Sign up!
-          </button>
-        </p>
-      </section>
-      {/* Section: CTA */}
-    </div>
-    {/* Grid container */}
     {/* Copyright */}
     <div
       className="text-center p-3"
