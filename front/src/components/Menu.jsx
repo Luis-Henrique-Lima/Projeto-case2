@@ -10,10 +10,7 @@ function Menu() {
     return (<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
         <Container>
             <LinkContainer to="/">
-                <Navbar.Brand><img src="https://user-images.githubusercontent.com/85020469/222034303-c769a11c-bc6b-48b1-8617-d7d4457e0e28.png" style="
-    height: 100px;
-    width: 392px;
-"></Navbar.Brand>
+                <Navbar.Brand><h1>DEVPLAY TV</h1></Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse  style={{justifyContent:"flex-end"}} id="responsive-navbar-nav">
