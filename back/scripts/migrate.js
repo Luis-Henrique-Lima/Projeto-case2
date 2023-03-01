@@ -16,6 +16,7 @@ const migrate = async () => {
         '"GENERO" TEXT NOT NULL',
         '"ANO" INTERGER NOT NULL',
         '"DURACAO" TEXT NOT NULL',
+        '"SINOPSE" TEXT NOT NULL',
         '"URL" TEXT NOT NULL'
     ])
     await User._migrate([
