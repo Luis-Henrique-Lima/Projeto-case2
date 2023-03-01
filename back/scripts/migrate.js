@@ -15,7 +15,8 @@ const migrate = async () => {
         '"NOME" TEXT NOT NULL',
         '"GENERO" TEXT NOT NULL',
         '"ANO" INTERGER NOT NULL',
-        '"DURACAO" TIME NOT NULL'
+        '"DURACAO" TEXT NOT NULL',
+        '"URL" TEXT NOT NULL'
     ])
     await User._migrate([
         '"ID" INTEGER PRIMARY KEY NOT NULL',

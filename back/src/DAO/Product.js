@@ -1,7 +1,7 @@
 import ApplicationModel from "./ApplicationModel.js";
 
 export default class Product extends ApplicationModel {
-    id; nome; genero; ano; duracao;
+    id; nome; genero; ano; duracao; url;
 
     static configurar() {
         Product.associar('id', 'ID')
@@ -9,5 +9,6 @@ export default class Product extends ApplicationModel {
         Product.associar('genero', 'GENERO')
         Product.associar('ano', 'ANO')
         Product.associar('duracao', 'DURACAO')
+        Product.associar('url', 'URL')
     }
 }

@@ -19,18 +19,19 @@ const seed = async () => {
     const pages = [page]
 
     const products = []
-    for (let i=1; i<=10; i++) {
+    for (let i=1; i<=1; i++) {
         const prod = new Product()
-        prod.nome = `Produto ${i}`
-        prod.genero = `Produto ${i}`
-        prod.ano = `${i}`
-        prod.duracao = `02:15`
+        prod.nome = `A Baleia`
+        prod.genero = `DRAMA`
+        prod.ano = `2023`
+        prod.duracao = `01:55`
+        prod.url = `https://cdnim.prd.cineticket.com.br/asset/movie/7976/a-baleia-poster-desktop-4960c.jpeg`
         products.push(prod)
     }
 
     const admin = new User()
-    admin.email = "login@email.com"
-    admin.encryptedPassword = hashSync('12345678', 10)
+    admin.email = "admin@login.com"
+    admin.encryptedPassword = hashSync('administrador', 10)
     const users = [admin]
    
     const contact = new Contact()

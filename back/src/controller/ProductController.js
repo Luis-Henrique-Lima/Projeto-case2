@@ -10,8 +10,8 @@ export default class ProductController {
     }
 
     static async inserir(req, res) {        
-        const { nome, genero, ano, duracao } = req.body
-        if (!nome || !genero || !ano || !duracao) {
+        const { nome, genero, ano, duracao, url } = req.body
+        if (!nome || !genero || !ano || !duracao || !url) {
             return res.status(400).send({
                 message: 'Os campos "title" e "description" são obrigatórios'
             })
@@ -22,6 +22,7 @@ export default class ProductController {
         product.genero = genero
         product.ano = ano
         product.duracao = duracao
+        product.url = url
 
         await product.save()
 
@@ -49,7 +50,7 @@ export default class ProductController {
             })
         }
 
-        const {nome, genero, ano, duracao} = req.body
+        const {nome, genero, ano, duracao, url} = req.body
         if (nome) {
             product.nome = nome
         }
@@ -61,6 +62,9 @@ export default class ProductController {
         }
         if (duracao) {
             product.duracao = duracao
+        }
+        if (url) {
+            product.url = url
         }
 
         await product.save()
