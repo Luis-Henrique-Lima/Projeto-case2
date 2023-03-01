@@ -30,7 +30,7 @@ function Sobre() {
 
             <div className="p-3 my-2 rounded">
                 <div style={{ color: '' }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus atque quisquam deserunt sit iure eaque asperiores numquam ab! Impedit optio qui molestias iusto autem ratione porro dolorem sit sequi beatae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea assumenda voluptatibus beatae. Cumque voluptatum rerum provident fugit distinctio tempora voluptas quo porro eligendi dolor ab consequuntur dicta rem, repellat magni!
+                    {sobre.text}
                 </div>
             </div>
             
