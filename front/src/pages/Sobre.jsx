@@ -77,7 +77,7 @@ function Sobre() {
 
                 <div className="cd">
                 <img className="img" src="https://media.licdn.com/dms/image/C4E03AQH4_PQQ_J7lXA/profile-displayphoto-shrink_800_800/0/1625260631370?e=2147483647&v=beta&t=LMYAOCOdt4ElBHbnM4lTYxfyruRxHt0SiM14x0KXt5U" alt="" />
-                <h5 >LUAN ALVES</h5>
+                <h5 >LUAN MARTINS</h5>
                 <br></br>
                 <div className="socialLinks">
                 <a href="https://github.com/luanmartins8" target="_blank"><img alt="SocialMedia" src={GithubIcon} style={{height: 25,width: 25,}} /></a>
